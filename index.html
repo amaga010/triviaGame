@@ -1,0 +1,282 @@
+<html>
+    <head>
+        <title>Trivia Game</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Assets/CSS/style.css">
+        <script src="./Assets/JavaScript/app.js"></script>
+    </head>
+    <body onLoad="setup()">
+        <div id="mainDiv">
+            <h1 id="heading1">Super Smash Bros. Trivia !</h1>
+            <div id="timer">
+                Time Remaining:
+                <span id="seconds">30</span> seconds
+            </div>
+            <div id="innerDiv" class="nextQuestion">
+                <div id="questions">Who is not part of the Original 8 ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="wrong">Samus</li>
+                        <li id="correct">Peach</li>
+                        <li class="wrong">Pikachu</li>
+                        <li class="wrong">Link</li>
+                    </ul>
+                </div>
+            </div> 
+            <div id="innerDiv2" class="nextQuestion">
+                <div id="questions">Which Pokemon is not summond by the Pokemon Trainer ?</div>
+                <div id="choices">
+                    <ul>
+                        <li id="correct">Pikachu</li>
+                        <li class="wrong">Charizard</li>
+                        <li class="wrong">Ivysaur</li>
+                        <li class="wrong">Squirtle</li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <div id="innerDiv3" class="nextQuestion">
+                <div id="questions">Which of these characters does not use ice as an attack ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="wrong">Ness</li>
+                        <li class="wrong">Ice Climbers</li>
+                        <li class="wrong">Mr. Game and Watch</li>
+                        <li id="correct">Sheik</li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <div id="innerDiv4" class="nextQuestion">
+                <div id="questions">Which of these characters does not belong ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="wrong">Fox</li>
+                        <li id="correct">Captain Falcon</li>
+                        <li class="wrong">Wolf</li>
+                        <li class="wrong">Falco</li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <div id="innerDiv5" class="nextQuestion">
+                <div id="questions">Who was the only character to not have their spirit taken in the games' trailer ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="wrong">Mario</li>
+                        <li class="wrong">Link</li>
+                        <li id="correct">Kirby</li>
+                        <li class="wrong">Ness</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="innerDiv6" class="nextQuestion">
+                <div id="questions">Which Series provides the most characters ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="wrong">Pokemon</li>
+                        <li class="wrong">Zelda</li>
+                        <li id="correct">Super Mario</li>
+                        <li class="wrong">Fire Emblem</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="innerDiv7" class="nextQuestion">
+                <div id="questions">Who is the oldest character in the game ?</div>
+                <div id="choices">
+                    <ul>
+                        <li id="correct">Mr. Game and Watch</li>
+                        <li class="wrong">Pac-Man</li>
+                        <li class="wrong">Ryu</li>
+                        <li class="wrong">Mario</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="innerDiv8" class="nextQuestion">
+                <div id="questions">Which of these characters in not a villain ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="wrong">Bowser</li>
+                        <li id="correct">Samus</li>
+                        <li class="wrong">Ganandorf</li>
+                        <li class="wrong">King K. Rool</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="innerDiv9" class="nextQuestion">
+                <div id="questions">Which character does not apper in the Fire Emblem Series ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="wrong">Marth</li>
+                        <li class="wrong">Chrome</li>
+                        <li id="correct">Cloud</li>
+                        <li class="wrong">Ike</li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <div id="innerDiv10" class="nextQuestion">
+                <div id="questions">Who is the best character to play with ?</div>
+                <div id="choices">
+                    <ul>
+                        <li class="correct">Piranha Plant</li>
+                        <li class="correct">R.O.B</li>
+                        <li class="correct">Duck Hunt</li>
+                        <li class="correct">Wii Fit Trainer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+<!--               ~~ WHAT NEEDS TO BE DONE ~~
+    1. Looks like one large div that contains all the information
+        - its cenered on the page 
+        - theres a title that remains on the page throughout the entire game
+        - before the game beings theres a start button that, when clicked, starts the game and thus the timer
+    2. Theres a div inside that div that contains a timer
+        - the timer counts down and resets whenever a question is selected or when the the timer reaches 0
+    3. Theres another div inside the large div that contains questions
+        - the questions changes text when an answer is given or when the timer reaches 0 
+        - before a new question is given, a right or wrong text shows up
+        - if the questions is wrong it provides the correct answer
+    4. Theres another div inside the larger div that displays possible answers
+        - when a list item is hovered over, the background changes color 
+        - upon clicking an answer a correct or inccorect text response is shown
+    5. After all the questions are answered the result is shown
+        - there is a space for wins
+        - there is a space for losses
+        - there is a space for questions unanswered
+        - there is also a button to restart the game
+    6. The restart button will restart the game, without having to reload the page
+    
+-->
+<!-- 
+
+<div id="innerDiv" class="nextQuestion">
+    <div id="questions">Who is not part of the Original 8 ?</div>
+    <div id="choices">
+        <ul>
+            <li class="wrong">Samus</li>
+            <li id="correct">Peach</li>
+            <li class="wrong">Pikachu</li>
+            <li class="wrong">Link</li>
+        </ul>
+    </div>
+</div> 
+
+<div id="innerDiv2" class="nextQuestion">
+    <div id="questions">Which Pokemon is not summond by the Pokemon Trainer ?</div>
+    <div id="choices">
+        <ul>
+            <li id="correct">Pikachu</li>
+            <li class="wrong">Charizard</li>
+            <li class="wrong">Ivysaur</li>
+            <li class="wrong">Squirtle</li>
+        </ul>
+    </div>
+</div> 
+
+<div id="innerDiv3" class="nextQuestion">
+    <div id="questions">Which of these characters does not use ice as an attack ?</div>
+    <div id="choices">
+        <ul>
+            <li class="wrong">Ness</li>
+            <li class="wrong">Ice Climbers</li>
+            <li class="wrong">Mr. Game and Watch</li>
+            <li id="correct">Sheik</li>
+        </ul>
+    </div>
+</div> 
+
+<div id="innerDiv4" class="nextQuestion">
+    <div id="questions">Which of these characters does not belong ?</div>
+    <div id="choices">
+        <ul>
+            <li class="wrong">Fox</li>
+            <li id="correct">Captain Falcon</li>
+            <li class="wrong">Wolf</li>
+            <li class="wrong">Falco</li>
+        </ul>
+    </div>
+</div> 
+
+<div id="innerDiv5" class="nextQuestion">
+    <div id="questions">Who was the only character to not have their spirit taken in the games' trailer ?</div>
+    <div id="choices">
+        <ul>
+            <li class="wrong">Mario</li>
+            <li class="wrong">Link</li>
+            <li id="correct">Kirby</li>
+            <li class="wrong">Ness</li>
+        </ul>
+    </div>
+</div>
+
+<div id="innerDiv6" class="nextQuestion">
+    <div id="questions">Which Series provides the most characters ?</div>
+    <div id="choices">
+        <ul>
+            <li class="wrong">Pokemon</li>
+            <li class="wrong">Zelda</li>
+            <li id="correct">Super Mario</li>
+            <li class="wrong">Fire Emblem</li>
+        </ul>
+    </div>
+</div>
+
+<div id="innerDiv7" class="nextQuestion">
+    <div id="questions">Who is the oldest character in the game ?</div>
+    <div id="choices">
+        <ul>
+            <li id="correct">Mr. Game and Watch</li>
+            <li class="wrong">Pac-Man</li>
+            <li class="wrong">Ryu</li>
+            <li class="wrong">Mario</li>
+        </ul>
+    </div>
+</div>
+
+<div id="innerDiv8" class="nextQuestion">
+    <div id="questions">Which of these characters in not a villain ?</div>
+    <div id="choices">
+        <ul>
+            <li class="wrong">Bowser</li>
+            <li id="correct">Samus</li>
+            <li class="wrong">Ganandorf</li>
+            <li class="wrong">King K. Rool</li>
+        </ul>
+    </div>
+</div>
+
+<div id="innerDiv9" class="nextQuestion">
+    <div id="questions">Which character does not apper in the Fire Emblem Series ?</div>
+    <div id="choices">
+        <ul>
+            <li class="wrong">Marth</li>
+            <li class="wrong">Chrome</li>
+            <li id="correct">Cloud</li>
+            <li class="wrong">Ike</li>
+        </ul>
+    </div>
+</div> 
+
+<div id="innerDiv10" class="nextQuestion">
+    <div id="questions">Who is the best character to play with ?</div>
+    <div id="choices">
+        <ul>
+            <li class="correct">Piranha Plant</li>
+            <li class="correct">R.O.B</li>
+            <li class="correct">Duck Hunt</li>
+            <li class="correct">Wii Fit Trainer</li>
+        </ul>
+    </div>
+</div>

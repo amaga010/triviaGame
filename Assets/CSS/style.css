@@ -1,0 +1,40 @@
+body {
+    background-color: pink;
+}
+
+#mainDiv {
+    border: 1px yellow solid;
+    background-color: yellow;
+    text-align: center; 
+    display: table; 
+    height: 600px;
+    width: 1000px; 
+    padding: 10px;
+    margin: 50px 0 100px 130px;
+}
+
+#heading1 {
+    font-size: 80px;
+    padding-top: 30px;
+}
+
+#timer {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+#questions {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+ul {
+    list-style: none;
+    padding-right: 40px;
+}
+
+li {
+    border: 1px red solid;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
